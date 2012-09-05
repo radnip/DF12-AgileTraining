@@ -17,7 +17,7 @@ The following is an example JavaScript button checks for the permission set "My_
 has the permission set the user is redirected to the Apex page "myApexWizard" (but this could be any URL). Otherwise
 the user is redirected to a page to complete training on the function.
 
-========================================================================
+```
 {!REQUIRESCRIPT("/soap/ajax/24.0/connection.js")}
 {!REQUIRESCRIPT("/soap/ajax/24.0/apex.js")}
 
@@ -33,7 +33,7 @@ if(result == 'true'){
   window.open('https://docs.google.com/a/netstronghold.com/spreadsheet/viewform?formkey=dEhCMDRwYS1JYkNZTFdmQ09kNV9mOFE6MQ','mywindow');
 
 }
-========================================================================
+```
 
 Any questions on this please contact me on twitter.
 
