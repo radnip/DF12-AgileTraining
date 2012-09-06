@@ -8,9 +8,7 @@ global with sharing class PermissionSetHelper {
 	 * @returns Boolean True = Has permission, False = Does not have permission
 	 */
 	webservice static Boolean hasPermission(String permissionName){
-		
-		Boolean foundPermission = False;
-		
+
 		List<PermissionSetAssignment> perms = new List<PermissionSetAssignment>([SELECT 
 				Id, 
 				PermissionSet.Name 
@@ -20,11 +18,7 @@ global with sharing class PermissionSetHelper {
 				PermissionSet.Name = :permissionName AND
 				AssigneeId = :Userinfo.getUserId()]);
 		
-		if (perms.size() > 0){
-			foundPermission = true;
-		}
-		
-		return foundPermission;
+		return (perms.size() > 0);
 	}
 	
 	@isTest
